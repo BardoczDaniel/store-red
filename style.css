@@ -17,6 +17,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1;
+
+  overflow-x: hidden;
 }
 
 /* REUSABLE CLASSES */
@@ -387,6 +389,10 @@ body {
 /* MEDIA QUERY FOR MENU */
 
 @media (max-width: 800px) {
+  html {
+    font-size: 56.25%;
+  }
+
   .nav-list {
     position: absolute;
     top: 7rem;
@@ -395,11 +401,12 @@ body {
     width: 100%;
 
     transition: all 0.4s;
-    transform: translateX(100%);
+    overflow: hidden;
+    max-height: 0px;
   }
 
   .reveal {
-    transform: translateX(0);
+    max-height: 20rem;
   }
 
   .nav-list li {
@@ -421,6 +428,10 @@ body {
 
 /* MEDIA QUERY FOR LESS THAN 600 screen size */
 @media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
   .col--2,
   .col--3,
   .col--5 {
